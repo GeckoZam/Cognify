@@ -10,13 +10,13 @@ namespace ConsoleApp1
     public class Program
     {
         // Interfaz común para todos los Crimenes
-        public interface ICrimen
+        public interface ICrimenType
         {
             void Crimen();
         }
 
         // Clases de instrumentos específicas que implementan la interfaz IInstrument
-        public class Robo : ICrimen
+        public class Robo : ICrimenType
         {
             public void Crimen()
             {
@@ -24,7 +24,7 @@ namespace ConsoleApp1
             }
         }
 
-        public class Homocidio : ICrimen
+        public class Homocidio : ICrimenType
         {
             public void Crimen()
             {
@@ -32,7 +32,7 @@ namespace ConsoleApp1
             }
         }
 
-        public class Asalto : ICrimen
+        public class Asalto : ICrimenType
         {
             public void Crimen()
             {
@@ -40,7 +40,7 @@ namespace ConsoleApp1
             }
         }
 
-        public class Guerra : ICrimen
+        public class Guerra : ICrimenType
         {
             public void Crimen()
             {
@@ -48,35 +48,51 @@ namespace ConsoleApp1
             }
         }
 
-        public class Guerra : ICrimen
+        public class Fraude : ICrimenType
         {
             public void Crimen()
             {
-                Console.WriteLine("Cometío crimen de guerra.");
+                Console.WriteLine("Cometío el crimen de fraude.");
             }
         }
 
         // Clase Factory que devuelve instancias de IInstrument según el tipo
-        public class InstrumentFactory
+        public class MemoryFactory
         {
-            public IInstrument CreateInstrument(string instrumentType)
+            public ICrimenType CreateSimulation(string crimeType)
             {
-                if (instrumentType == "Guitar")
+                if (crimeType == "Robo")
                 {
-                    return new Guitar();
+                    return new Robo();
                 }
-                else if (instrumentType == "Piano")
+                else if (crimeType == "Homicidio")
                 {
-                    return new Piano();
+                    return new Homicidio();
+                }
+                else if (crimeType == "Homicidio")
+                {
+                    return new Homicidio();
+                }
+                else if (crimeType == "Asalto")
+                {
+                    return new Asalto();
+                }
+                else if (crimeType == "Guerra")
+                {
+                    return new Guerra();
+                }                
+                else if (crimeType == "Fraude")
+                {
+                    return new Fraude();
                 }
                 else
                 {
-                    throw new ArgumentException("Instrument not available.");
+                    throw new ArgumentException("Persona libre de crimenes.");
                 }
             }
         }
         // Clase MusicStore que usa InstrumentFactory y aplica Inversión de Dependencias
-        public class MusicStore
+        public class Simulation
         {
             private readonly InstrumentFactory _instrumentFactory;
 
