@@ -1,33 +1,29 @@
 # Cognify
 ## Portada
 
-<p style="text-align:center"> TECNOLÓGICO​ ​NACIONAL​ ​DE​ ​MÉXICO</p>
-<p style="text-align:center;">INSTITUTO TECNOLÓGICO DE TIJUANA</p>
+<p align="center">TECNOLÓGICO​ ​NACIONAL​ ​DE​ ​MÉXICO </p>
+<p align="center">INSTITUTO TECNOLÓGICO DE TIJUANA</p>
 
-<p style="text-align:center;">SUBDIRECCIÓN ACADÉMICA</p>
-<p style="text-align:center;">DEPARTAMENTO DE SISTEMAS Y COMPUTACIÓN</p>
+<p align="center">SUBDIRECCIÓN ACADÉMICA</p>
+<p align="center">DEPARTAMENTO DE SISTEMAS Y COMPUTACIÓN</p>
 
-<p style="text-align:center;">SEMESTRE: </p>
-<p style="text-align:center;">Agosto-Diciembre 2024</p>
+<p align="center">SEMESTRE: </p>
+<p align="center">Agosto-Diciembre 2024</p>
 
-<p style="text-align:center;">CARRERA: </p>
-<p style="text-align:center;">Ing. Sistemas Computacionales</p>
+<p align="center">CARRERA: </p>
+<p align="center">Ing. Sistemas Computacionales</p>
 
-<p style="text-align:center;">MATERIA:</p>
-<p style="text-align:center;">Desarrollo Profesional</p>
+<p align="center">MATERIA:</p>
+<p align="center">Desarrollo Profesional</p>
 
-<p style="text-align:center;">TÍTULO:​</p>
-<p style="text-align:center;">11. Dimensión Social</p>
+<p align="center">TÍTULO DE ACTIVIDAD:​</p>
+<p align="center">Cognify </p>
 
-<p style="text-align:center;">UNIDAD A EVALUAR:</p>
-<p style="text-align:center;">Unidad 3</p>
+<p align="center">NOMBRE Y NÚMERO DE CONTROL DEL ALUMNO(S):</p>
+<p align="center">Salazar Diaz Samuel – 19211729</p>
 
-<p style="text-align:center;">NOMBRE Y NÚMERO DE CONTROL DEL ALUMNO(S):</p>
-<p style="text-align:center;">Salazar Diaz Samuel – 19211729</p>
-
-
-<p style="text-align:center;">NOMBRE DEL MAESTRO:</p>
-<p style="text-align:center;">Cristina Cervantes Vilvado </p>
+<p align="center">NOMBRE DEL MAESTRO:</p>
+<p align="center">René Solís R.</p>
 
 
 ## Video en Loom del codigo corriendo
