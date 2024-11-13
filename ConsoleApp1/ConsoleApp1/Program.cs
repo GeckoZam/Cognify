@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -24,7 +24,7 @@ namespace ConsoleApp1
             }
         }
 
-        public class Homocidio : ICrimenType
+        public class Homicidio : ICrimenType
         {
             public void Crimen()
             {
@@ -69,10 +69,6 @@ namespace ConsoleApp1
                 {
                     return new Homicidio();
                 }
-                else if (crimeType == "Homicidio")
-                {
-                    return new Homicidio();
-                }
                 else if (crimeType == "Asalto")
                 {
                     return new Asalto();
@@ -80,7 +76,7 @@ namespace ConsoleApp1
                 else if (crimeType == "Guerra")
                 {
                     return new Guerra();
-                }                
+                }
                 else if (crimeType == "Fraude")
                 {
                     return new Fraude();
@@ -97,7 +93,7 @@ namespace ConsoleApp1
             private readonly MemoryFactory _memoryFactory;
 
             // Constructor que recibe la fábrica como dependencia
-            public Criminal(MemoryFactory memoryFactory)
+            public Simulation(MemoryFactory memoryFactory)
             {
                 _memoryFactory = memoryFactory;
             }
@@ -106,7 +102,8 @@ namespace ConsoleApp1
             {
                 try
                 {
-                    var criminal = _memoryFactory.CreateSimulation(memoryType);
+                    var criminal = _memoryFactory.CreateSimulation(crimenType);
+                    Console.WriteLine("Ingresando a pensamientos del criminal...");
                     criminal.Crimen();
                 }
                 catch (ArgumentException e)
@@ -118,11 +115,12 @@ namespace ConsoleApp1
         public static void Main(string[] args)
         {
             var factory = new MemoryFactory();
-            var simulacion = new Simulacion(factory);
+            var simulacion = new Simulation(factory);
 
-            simulacion.PlayInstrument("Guerra");  // Output: Playing a guitar.
-            simulacion.PlayInstrument("Asalto");   // Output: Playing a piano.
-            simulacion.PlayInstrument("Homicidio");   // Output: Instrument not available.
+            simulacion.Sentencia("Guerra");  // Output: Cometio crimen de guerra
+            simulacion.Sentencia("Asalto");   // Output: Cometio crimen de asalto.
+            simulacion.Sentencia("Homicidio");   // Output: Cometio crimen de homicidio.
+            simulacion.Sentencia("Inocente");       //Output: Persona libre de crimen.
         }
     }
 }
