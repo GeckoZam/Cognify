@@ -14,7 +14,7 @@
 <p align="center">Ing. Sistemas Computacionales</p>
 
 <p align="center">MATERIA:</p>
-<p align="center">Desarrollo Profesional</p>
+<p align="center">Patrones de Diseño</p>
 
 <p align="center">TÍTULO DE ACTIVIDAD:​</p>
 <p align="center">Cognify </p>
