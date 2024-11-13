@@ -94,20 +94,20 @@ namespace ConsoleApp1
         // Clase MusicStore que usa InstrumentFactory y aplica Inversión de Dependencias
         public class Simulation
         {
-            private readonly InstrumentFactory _instrumentFactory;
+            private readonly MemoryFactory _memoryFactory;
 
             // Constructor que recibe la fábrica como dependencia
-            public MusicStore(InstrumentFactory instrumentFactory)
+            public Criminal(MemoryFactory memoryFactory)
             {
-                _instrumentFactory = instrumentFactory;
+                _memoryFactory = memoryFactory;
             }
 
-            public void PlayInstrument(string instrumentType)
+            public void Sentencia(string crimenType)
             {
                 try
                 {
-                    var instrument = _instrumentFactory.CreateInstrument(instrumentType);
-                    instrument.Play();
+                    var criminal = _memoryFactory.CreateSimulation(memoryType);
+                    criminal.Crimen();
                 }
                 catch (ArgumentException e)
                 {
@@ -117,12 +117,12 @@ namespace ConsoleApp1
         }
         public static void Main(string[] args)
         {
-            var factory = new InstrumentFactory();
-            var store = new MusicStore(factory);
+            var factory = new MemoryFactory();
+            var simulacion = new Simulacion(factory);
 
-            store.PlayInstrument("Guitar");  // Output: Playing a guitar.
-            store.PlayInstrument("Piano");   // Output: Playing a piano.
-            store.PlayInstrument("Drums");   // Output: Instrument not available.
+            simulacion.PlayInstrument("Guerra");  // Output: Playing a guitar.
+            simulacion.PlayInstrument("Asalto");   // Output: Playing a piano.
+            simulacion.PlayInstrument("Homicidio");   // Output: Instrument not available.
         }
     }
 }
